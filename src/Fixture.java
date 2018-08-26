@@ -1,2 +1,4 @@
-public class Fixture {
+public class Fixture extends SmartObject {
+
+
 }

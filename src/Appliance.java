@@ -1,4 +1,7 @@
-public class Appliance {
+public class Appliance extends SmartObject{
+
+
+
 
 
 }

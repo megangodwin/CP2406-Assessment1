@@ -4,7 +4,7 @@ public class SmartHouseSimulator {
 
     public static void main(String[] args) {
 
-        //import txt file
+        //import txt file for configuration
 
         System.out.println("Welcome to Smart House Simulator. Select an option to continue, M = Menu. E = Exit. R = Run simulation");
 

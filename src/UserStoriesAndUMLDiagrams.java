@@ -25,30 +25,6 @@ public class UserStoriesAndUMLDiagrams {
 
 
 
-    UML Class Diagrams
-
-    House
-        Attributes:
-
-
-     Inherits from House
-     Room
-        Attributes:
-
-    Appliance
-        Attributes
-            powerUsage
-            waterUsage
-            applianceStatus
-        Functions
-
-    Fixture
-        Attributes
-            powerUsage
-            waterUsage
-            fixtureStatus
-        Functions
-
     */
 
 

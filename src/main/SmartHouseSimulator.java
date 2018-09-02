@@ -26,10 +26,10 @@ public class SmartHouseSimulator {
         int randomNumber = (int)(Math.random() * ((max - min) + 1)) + min;
         //70% change of sun - if number between 1-70 - status 1
         //30% chance of rain - if number between 71-100 - status 2
-        if (randomNumber <= 70) {
+        if (randomNumber <= 85) {
             weatherStatus = 1;
             return weatherStatus;
-        } else if (randomNumber > 70) {
+        } else if (randomNumber > 85) {
             weatherStatus = 2;
             return weatherStatus;
 

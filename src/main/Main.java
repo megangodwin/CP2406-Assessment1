@@ -1,37 +1,33 @@
+package main;
+
 import java.util.Scanner;
 
-public class SmartHouseSimulator {
+public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Welcome to Smart model.House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
 
-        //import txt file for configuration
-
-        //initialise appliances
-
-        System.out.println("Welcome to Smart House Simulator. Select an option to continue,  1 = Exit. 2 = Run simulation. 3 = See room configuration");
-
-        int stateInput = 0;
         Scanner scanner = new Scanner(System.in);
 
         boolean quit = false;
 
-        while (quit == false) {
+        while (!quit) {
 
             int stateInput = scanner.nextInt();
 
             switch (stateInput) {
-                case 1: //exit program
+                case 0: //exit program
                     System.out.println("Exiting program...");
                     quit = true;
                     break;
 
-                case 2: //run simulation
+                case 1: //run simulation
                     System.out.println("Running Simulation...");
                     break;
 
-                case 3: //Show configuration
-                }
+                case 2: //Show configuration
+            }
         }
-
     }
+
 }

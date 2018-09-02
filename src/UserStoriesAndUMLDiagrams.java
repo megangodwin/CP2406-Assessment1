@@ -8,7 +8,6 @@ public class UserStoriesAndUMLDiagrams {
         Estimate 1 day
 
     TODO User wants to track usage of electricity
-
         Estimate: 1 day
 
     User wants to track usage of water - TODO

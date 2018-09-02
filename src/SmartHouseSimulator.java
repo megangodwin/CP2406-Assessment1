@@ -6,27 +6,32 @@ public class SmartHouseSimulator {
 
         //import txt file for configuration
 
-        System.out.println("Welcome to Smart House Simulator. Select an option to continue, M = Menu. E = Exit. R = Run simulation");
+        //initialise appliances
 
-        int state = 0;
+        System.out.println("Welcome to Smart House Simulator. Select an option to continue,  1 = Exit. 2 = Run simulation. 3 = See room configuration");
+
+        int stateInput = 0;
         Scanner scanner = new Scanner(System.in);
-        while (true) {
 
-            String input = scanner.nextLine();
+        boolean quit = false;
 
-            switch (state) {
-                case 0: //run menu
-                    System.out.println("Menu");
-                    if (input.equals("M"))
+        while (quit == false) {
 
-                    break;
+            int stateInput = scanner.nextInt();
+
+            switch (stateInput) {
                 case 1: //exit program
-                    System.out.println("Exit program");
+                    System.out.println("Exiting program...");
+                    quit = true;
                     break;
+
                 case 2: //run simulation
                     System.out.println("Running Simulation...");
                     break;
-            }
+
+                case 3: //Show configuration
+                }
         }
+
     }
 }

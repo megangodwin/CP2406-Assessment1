@@ -4,14 +4,18 @@ public class SmartDevice {
     //power usage per watt
     //water usage per litre
 
-    double powerUsage;
-    double waterUsage;
-    int status;
+    private double powerUsage;
+    private double waterUsage;
+    private int status;
+    private int xOffset, yOffset;
 
-    protected SmartDevice(double powerUsage, double waterUsage, int status){
+    protected SmartDevice(double powerUsage, double waterUsage, int status, int xOffset, int yOffset){
         this.powerUsage = powerUsage;
         this.waterUsage = waterUsage;
         this.status = status;
+        this.xOffset = xOffset;
+        this.yOffset = yOffset;
+
     }
 
     public void getStatus(){

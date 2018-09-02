@@ -7,4 +7,7 @@ public class House {
 
 
     //Rooms is a list of room objects
+
+    Room[] rooms = new Room[4];
+
 }

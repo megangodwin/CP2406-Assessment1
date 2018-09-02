@@ -16,7 +16,7 @@ public class UserStoriesAndUMLDiagrams {
     TODO A user wants their house to have an air con unit in every room
         Estimate: 2 days
 
-    TODO A user doesn’t want sprinklers to activate while it’s raining
+    TODO BUGGY - A user doesn’t want sprinklers to activate while it’s raining
         Estimate: 1 day
 
     TODO user wants to know when there is a potential intruder in the house

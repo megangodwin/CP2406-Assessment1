@@ -3,8 +3,8 @@ package model;
 public class SmartDevice {
 
 
-    //power usage per watt
-    //water usage per litre
+    //power usage in watts per hour
+    //water usage in litres per hour
 
     private double powerUsage;
     private double waterUsage;

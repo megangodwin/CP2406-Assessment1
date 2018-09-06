@@ -1,5 +1,7 @@
 package main;
 
+import model.Room;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +9,14 @@ public class Main {
     public static void main(String[] args) {
 
         //import configuration txt file TODO
+
+        //Room[] rooms = new Room[5];
+        //rooms[0] = new Room();
+        //rooms[1] = new Room();
+        //rooms[2] = new Room();
+        //rooms[3] = new Room();
+
+
 
         System.out.println("Welcome to Smart House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
 

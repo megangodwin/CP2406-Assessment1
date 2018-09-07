@@ -4,7 +4,7 @@ import model.House;
 
 import java.util.Random;
 
-public class SmartHouseSimulator {
+public class SmartHouseSimulator implements Runnable{
     //how should the simulation start each run
     int timeOfDay = 0;
     int weatherStatus = 0;
@@ -20,6 +20,9 @@ public class SmartHouseSimulator {
 
     }
 
+    public abstract run() {
+
+    }
 
     private int eventGenerator(int timeOfDay) {
         //1440 simulated minutes per simulation
@@ -28,10 +31,9 @@ public class SmartHouseSimulator {
             while (seconds != maxSeconds) {
                 ++timeOfDay;
                 weatherGenerator(weatherStatus);
-                //devices - prompted by the returned time - print status change
+                //TODO devices - prompted by the returned time - print status change
                 Thread.sleep(350);
                 return timeOfDay;
-
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -41,7 +43,7 @@ public class SmartHouseSimulator {
 
 
     protected int weatherGenerator(int weatherStatus) {
-        //random number
+        //random number for chance of weather change
         int max = 100;
         int min = 1;
         int randomNumber = (int) (Math.random() * ((max - min) + 1)) + min;
@@ -53,9 +55,12 @@ public class SmartHouseSimulator {
                 System.out.println("it is sunny");
             }
         } else if (randomNumber > 45) {
-            weatherStatus = 1;
-            System.out.println("it is raining");
-            return weatherStatus;
+            if (weatherStatus == 1) {
+                weatherStatus = 1;
+            } else if (weatherStatus != 1) {
+                weatherStatus = 1;
+                System.out.println("it is raining");
+            }
         }
         return weatherStatus;
     }

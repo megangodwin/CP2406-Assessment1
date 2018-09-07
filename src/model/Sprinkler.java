@@ -1,9 +1,12 @@
 package model;
 
+import java.util.Scanner;
+
 public class Sprinkler extends Appliance {
 
     protected int wateringTime;
     protected int startTime;
+    int waterSetting;
 
     protected Sprinkler(double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
         super(powerUsage, waterUsage, status, xOffset, yOffset);
@@ -14,8 +17,10 @@ public class Sprinkler extends Appliance {
         this.startTime = startTime;
     }
 
-    public boolean setWateringTime() {
+    public boolean setWateringTime(int waterSetting) {
         //how long should the sprinkler run
+
+
 
         return true;
     }

@@ -33,4 +33,9 @@ public class SmartDevice {
         //was the setting successful
         return true;
     }
+
+    protected void update(){
+        //update time passed from smart house sim
+        timeOfDay = 
+    }
 }

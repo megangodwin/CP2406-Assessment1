@@ -1,69 +1,59 @@
 package main;
 
-import model.House;
-
+import model.*;
 import java.util.Random;
 
 public class SmartHouseSimulator implements Runnable{
-    //how should the simulation start each run
-    int timeOfDay = 0;
-    int weatherStatus = 0;
-    private int seconds = 0;
-    private int maxSeconds = 1440;
+
+    @Override
+    public void run() {
 
 
-    //create simulation elements
-    House house = new House();
+        //random weather generation
+        /*int max = 100;
+        int min = 0;
+        int randomNumber = (int) (Math.random() * ((max - min + 1)));
+        int weatherStatus = 0;
 
-    protected SmartHouseSimulator(int timeOfDay, int weatherStatus) {
+        if(randomNumber <=45) {
+            if(weatherStatus == 0) {
+                weatherStatus = 0; //do nothing
+            } else if(weatherStatus != 0) {
+                weatherStatus = 0;
+                System.out.println("It is sunny"); //only displays whe there is a change in the weather
+            }
+        }else if(randomNumber > 45) {
+            if(weatherStatus == 1) {
+                weatherStatus = 1; //do nothing
+            } else if(weatherStatus != 1) {
+                weatherStatus = 1;
+                System.out.println("It is raining"); //only displays when there is a change in the weather
+            }
+        }*/
 
 
-    }
+        //time - 1440 simulated minutes per simulation
 
-    public abstract run() {
-
-    }
-
-    private int eventGenerator(int timeOfDay) {
-        //1440 simulated minutes per simulation
+        int seconds = 0;
+        int MAXSECONDS = 1440;
+        int timeOfDay = 0;
 
         try {
-            while (seconds != maxSeconds) {
+            while(seconds != MAXSECONDS) {
                 ++timeOfDay;
-                weatherGenerator(weatherStatus);
-                //TODO devices - prompted by the returned time - print status change
+                //implement weather
                 Thread.sleep(350);
-                return timeOfDay;
+
+                //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
             }
-        } catch (InterruptedException e) {
+        } catch(InterruptedException e) {
             e.printStackTrace();
         }
-        return timeOfDay;
+
     }
 
 
-    protected int weatherGenerator(int weatherStatus) {
-        //random number for chance of weather change
-        int max = 100;
-        int min = 1;
-        int randomNumber = (int) (Math.random() * ((max - min) + 1)) + min;
-        if (randomNumber <= 45) {
-            if (weatherStatus == 0) {
-                weatherStatus = 0;
-            } else if (weatherStatus != 0) {
-                weatherStatus = 0;
-                System.out.println("it is sunny");
-            }
-        } else if (randomNumber > 45) {
-            if (weatherStatus == 1) {
-                weatherStatus = 1;
-            } else if (weatherStatus != 1) {
-                weatherStatus = 1;
-                System.out.println("it is raining");
-            }
-        }
-        return weatherStatus;
-    }
+
 }
 
 

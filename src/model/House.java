@@ -8,11 +8,12 @@ public class House {
 
     //Rooms is a list of room objects
 
-    Room[] rooms = new Room[5];
-    rooms[0] = new Room();
-    rooms[1] = new Room();
-    rooms[2] = new Room();
-    rooms[3] = new Room();
+    Room[] rooms = new Room[4];
+    //rooms[0] = new Room(20);
+    //rooms[1] = new Room(20);
+    //rooms[2] = new Room(20);
+    //rooms[3] = new Room(20);
+    //rooms[4] = new Room(20);
 
 
 

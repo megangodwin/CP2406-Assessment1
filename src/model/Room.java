@@ -3,10 +3,11 @@ package model;
 public class Room {
 
     //rooms control smartDevice positions?
+    //initialise rooms based on configuration
 
     int temperature;
 
-    public Room(int temperature) {
+    public Room() {
         this.temperature = temperature;
 
     }

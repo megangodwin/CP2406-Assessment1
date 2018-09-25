@@ -34,15 +34,18 @@ public class SmartHouseSimulator implements Runnable{
 
         //time - 1440 simulated minutes per simulation
 
-        int seconds = 0;
-        int MAXSECONDS = 1440;
-        int timeOfDay = 0;
 
+        int timeOfDay = 0;
+    }
+
+    public void timeSimulation(int timeOfDay){
+        int seconds = 0;
+        int MAX_SECONDS = 1440;
         try {
-            while(seconds != MAXSECONDS) {
+            while(seconds != MAX_SECONDS) {
                 ++timeOfDay;
-                //implement weather
                 Thread.sleep(350);
+                System.out.println(timeOfDay);
 
                 //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
             }
@@ -50,6 +53,10 @@ public class SmartHouseSimulator implements Runnable{
             e.printStackTrace();
         }
 
+    }
+
+    public int getTime(){
+        return timeOfDay;
     }
 
 

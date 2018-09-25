@@ -1,5 +1,9 @@
 package model;
 
+import main.SmartHouseSimulator;
+
+import java.util.Scanner;
+
 public class SmartDevice {
 
 
@@ -10,6 +14,7 @@ public class SmartDevice {
     private double waterUsage;
     private int status;
     private int xOffset, yOffset;
+    int time;
 
     protected SmartDevice(double powerUsage, double waterUsage, int status, int xOffset, int yOffset){
         this.powerUsage = powerUsage;
@@ -30,12 +35,16 @@ public class SmartDevice {
 
     public boolean setStatus(){
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter status");
+
         //was the setting successful
+        //if (deviceStatus == setting)
         return true;
     }
 
-    protected void update(){
+    protected void update(int time){
         //update time passed from smart house sim
-        timeOfDay = 
+        time = SmartHouseSimulator.getTime();
     }
 }

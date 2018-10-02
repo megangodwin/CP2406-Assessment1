@@ -35,7 +35,9 @@ public class SmartHouseSimulator implements Runnable{
         //time - 1440 simulated minutes per simulation
 
 
-        int timeOfDay = 0;
+        int timeOfDay;
+
+
     }
 
     public void timeSimulation(int timeOfDay){

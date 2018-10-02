@@ -1,5 +1,3 @@
-package main;
-
 import main.SmartHouseSimulator;
 import model.Room;
 
@@ -11,7 +9,7 @@ public class Main {
 
         //import configuration txt file TODO
 
-        //SmartHouseSimulator sim = new(SmartHouseSimulator sim);
+        SmartHouseSimulator sim = new SmartHouseSimulator();
 
 
         System.out.println("Welcome to Smart House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
@@ -31,7 +29,7 @@ public class Main {
                     break;
                 case 1: //run simulation
                     System.out.println("Running Simulation...");
-                    SmartHouseSimulator.run();
+                    sim.run();
                     break;
                 case 2: //Show configuration
                     System.out.println("Current configuration...");

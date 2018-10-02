@@ -12,7 +12,7 @@ public class SmartDevice {
     private double waterUsage;
     private int status;
     private int xOffset, yOffset;
-    int time;
+    int deviceTime;
 
     protected SmartDevice(double powerUsage, double waterUsage, int status, int xOffset, int yOffset){
         this.powerUsage = powerUsage;
@@ -41,8 +41,8 @@ public class SmartDevice {
         return true;
     }
 
-    protected void update(int time){
+    protected void setDeviceClock(int time){
         //update time passed from smart house sim
-        time = getSimTime();
+        this.deviceTime = time;
     }
 }

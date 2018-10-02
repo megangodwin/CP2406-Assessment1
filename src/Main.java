@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Main {
 
-    int time = 0;
+   //public static int time = 0;
 
     public static void main(String[] args) {
 
@@ -37,19 +37,19 @@ public class Main {
                     //sim.run();
 
 
-                    int seconds = 0;
-                    int MAX_SECONDS = 1440;
-                    try {
-                        while (seconds != MAX_SECONDS) {
-                            ++time;
-                            Thread.sleep(350);
-                            System.out.println(time);
-
-                            //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
-                        }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    int seconds = 0;
+//                    int MAX_SECONDS = 1440;
+//                    try {
+//                        while (seconds != MAX_SECONDS) {
+//                            ++time;
+//                            Thread.sleep(350);
+//                            System.out.println(time);
+//
+//                            //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
+//                        }
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
 
 //                    LocalTime time = LocalTime.of(5, 0);
 //                    System.out.println("custom time: " + time);
@@ -92,7 +92,4 @@ public class Main {
         }
     }
 
-    public int getSimTime() {
-        return time;
-    }
 }

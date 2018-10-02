@@ -1,24 +1,24 @@
-//import model;
+package model;//import model;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class SmartHouseSimulator extends Runnable{
+public class SmartHouseSimulator implements Runnable{
 
-    AtomicInteger timeOfDay = new AtomicInteger(0);
+    int timeOfDay;
+
+    //AtomicInteger timeOfDay = new AtomicInteger(0);
 
     public SmartHouseSimulator(int timeOfDay){
 
-        this.timeOfDay = null;
+        this.timeOfDay = 0;
     }
 
     @Override
     public void run(){
-        timeSimulation();
+
+        timeSimulation(0);
     }
-
-
-
 
     public void weatherGenerator() {
 
@@ -51,9 +51,7 @@ public class SmartHouseSimulator extends Runnable{
 
     }
 
-    public void timeSimulation() {
-        int timeOfDay = 0;
-
+    public void timeSimulation(int timeOfDay) {
         int seconds = 0;
         int maxSeconds = 1440;
 
@@ -71,7 +69,8 @@ public class SmartHouseSimulator extends Runnable{
         }
     }
 
-    public AtomicInteger getTime() {
+    public int getTime() {
+
         return timeOfDay;
     }
 

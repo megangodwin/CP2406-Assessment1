@@ -1,3 +1,5 @@
+import model.SmartHouseSimulator;
+
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +28,10 @@ public class Main {
                     break;
                 case 1: //run simulation
                     System.out.println("Running Simulation...");
-                    sim.run();
+
+                        sim.run();
+
+
                     break;
                 case 2: //Show configuration
                     System.out.println("Current configuration...");

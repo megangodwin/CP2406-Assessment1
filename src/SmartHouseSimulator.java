@@ -41,19 +41,19 @@ public class SmartHouseSimulator implements Runnable{
     }
 
     public void timeSimulation(int time){
-        int seconds = 0;
-        int MAX_SECONDS = 1440;
-        try {
-            while(seconds != MAX_SECONDS) {
-                ++time;
-                Thread.sleep(350);
-                System.out.println(time);
-
-                //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
-            }
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
+//        int seconds = 0;
+//        int MAX_SECONDS = 1440;
+//        try {
+//            while(seconds != MAX_SECONDS) {
+//                ++time;
+//                Thread.sleep(350);
+//                System.out.println(time);
+//
+//                //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
+//            }
+//        } catch(InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

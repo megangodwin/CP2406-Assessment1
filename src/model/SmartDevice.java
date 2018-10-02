@@ -43,6 +43,6 @@ public class SmartDevice {
 
     protected void update(int time){
         //update time passed from smart house sim
-        //time = getSimTime();
+        time = getSimTime();
     }
 }

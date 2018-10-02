@@ -1,16 +1,20 @@
 import java.lang.reflect.Array;
-import java.time.LocalDateTime;
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Date;
 
 public class Main {
 
+    int time = 0;
+
     public static void main(String[] args) {
 
         //import configuration txt file TODO
 
         //SmartHouseSimulator sim = new SmartHouseSimulator();
+
 
 
         System.out.println("Welcome to Smart House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
@@ -32,11 +36,32 @@ public class Main {
                     System.out.println("Running Simulation...");
                     //sim.run();
 
-                    LocalDateTime currTime = LocalDateTime.now();
-                    System.out.println("current date time: " + currTime);
 
-                    LocalDateTime custDate1 = LocalDateTime.of(2015, 12, 2, 10, 30);
-                    System.out.println("custom date time: " +custDate1);
+                    int seconds = 0;
+                    int MAX_SECONDS = 1440;
+                    try {
+                        while (seconds != MAX_SECONDS) {
+                            ++time;
+                            Thread.sleep(350);
+                            System.out.println(time);
+
+                            //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+//                    LocalTime time = LocalTime.of(5, 0);
+//                    System.out.println("custom time: " + time);
+//
+//                    while (time != LocalTime.of(4,59)){
+//                        LocalTime updatedTime = time.withMinute(+1);
+//                        System.out.println("updated time " + updatedTime);
+//                    }
+
+
+//                    LocalTime updatedTime = time.plus(Duration.ofMinutes(20));
+//                    System.out.println("updated time: " + updatedTime);
 
 
 //                    try {
@@ -57,8 +82,6 @@ public class Main {
 //                    time[1] = 00;
 //                    System.out.println(Arrays.toString(time));
 
-
-
                     break;
                 case 2: //Show configuration
                     System.out.println("Current configuration...");
@@ -69,4 +92,7 @@ public class Main {
         }
     }
 
+    public int getSimTime() {
+        return time;
+    }
 }

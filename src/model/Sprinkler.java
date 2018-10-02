@@ -28,7 +28,7 @@ public class Sprinkler extends Appliance {
     public int getWateringTime() {
         //the length of time the sprinkler is set to run
 
-        //will this be an int? TODO
+        return wateringTime;
     }
 
     public boolean setStartTime() {
@@ -39,6 +39,6 @@ public class Sprinkler extends Appliance {
 
     public int getStartTime() {
         //print the time the sprinkler is set to start
-
+        return startTime;
     }
 }

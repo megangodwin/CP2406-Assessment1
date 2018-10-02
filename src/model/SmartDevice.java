@@ -8,10 +8,10 @@ public class SmartDevice {
     //power usage in watts per hour
     //water usage in litres per hour
 
-    private double powerUsage;
-    private double waterUsage;
-    private int status;
-    private int xOffset, yOffset;
+    protected double powerUsage;
+    protected double waterUsage;
+    protected int status;
+    protected int xOffset, yOffset;
     int deviceTime;
 
     protected SmartDevice(double powerUsage, double waterUsage, int status, int xOffset, int yOffset){

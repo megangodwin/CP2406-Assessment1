@@ -7,6 +7,7 @@ public class Sprinkler extends Appliance {
     protected int wateringTime;
     protected int startTime;
     int waterSetting;
+    int deviceWeatherStatus;
 
     protected Sprinkler(double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
         super(powerUsage, waterUsage, status, xOffset, yOffset);
@@ -20,8 +21,6 @@ public class Sprinkler extends Appliance {
     public boolean setWateringTime(int waterSetting) {
         //how long should the sprinkler run
 
-
-
         return true;
     }
 
@@ -31,14 +30,20 @@ public class Sprinkler extends Appliance {
         return wateringTime;
     }
 
-    public boolean setStartTime() {
+    public void setStartTime() {
         //the time at which the sprinkler will run
 
-        return true;
     }
 
     public int getStartTime() {
         //print the time the sprinkler is set to start
         return startTime;
+    }
+
+    public void getWeatherStatus(int weatherStatus) {
+        this.deviceWeatherStatus = weatherStatus;
+        if (deviceWeatherStatus == 1) {
+            this.status = 0;
+        }
     }
 }

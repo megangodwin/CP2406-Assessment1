@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package model;
 
 
@@ -19,3 +20,26 @@ public class Appliance extends SmartDevice {
 
 
 }
+=======
+package model;
+
+
+import java.util.Scanner;
+
+public class Appliance extends SmartDevice {
+
+    public Appliance(String name, double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
+        //call smart object constructor
+        super(name, powerUsage, waterUsage, status, xOffset, yOffset);
+
+    }
+
+    public boolean setPosition(int offset) {
+        Scanner scanner = new Scanner(System.in);
+        boolean movementSuccess = false;
+        return movementSuccess;
+    }
+
+
+}
+>>>>>>> sprinklers

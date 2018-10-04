@@ -1,6 +1,8 @@
+import model.Sprinkler;
+
 public class SmartHouseSimulator implements Runnable{
 
-    public static int time;
+    public int time;
     public static int weatherStatus = 0;
 
 
@@ -35,8 +37,6 @@ public class SmartHouseSimulator implements Runnable{
                         System.out.println("It is raining"); //only displays when there is a change in the weather
                     }
                 }
-
-                System.out.println(time);
 
                 //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
             }

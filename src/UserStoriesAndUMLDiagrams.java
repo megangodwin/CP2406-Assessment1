@@ -17,9 +17,10 @@ public class UserStoriesAndUMLDiagrams {
         Estimate: 2 days
 
     TODO The user wants to see the time in the simulation
-        Estimate:
+        Estimate: 3 days
 
-    TODO BUGGY - A user doesn’t want sprinklers to activate while it’s raining
+    TODO Implemented - A user doesn’t want sprinklers to activate while it’s raining
+    requires more testing
         Estimate: 3 days
 
     TODO user wants to know when there is a potential intruder in the house

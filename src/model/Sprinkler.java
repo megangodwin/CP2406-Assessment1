@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Sprinkler extends Appliance {
 
-    protected int wateringTime;
-    protected int startTime;
+    public int wateringTime;
+    public int startTime;
     int waterSetting;
     int deviceWeatherStatus;
 
-    protected Sprinkler(double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
-        super(powerUsage, waterUsage, status, xOffset, yOffset);
+    public Sprinkler(String name, double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
+        super(name, powerUsage, waterUsage, status, xOffset, yOffset);
         powerUsage = 0;
         waterUsage = 3861.12;
         status = 0;
@@ -42,8 +42,5 @@ public class Sprinkler extends Appliance {
 
     public void getWeatherStatus(int weatherStatus) {
         this.deviceWeatherStatus = weatherStatus;
-        if (deviceWeatherStatus == 1) {
-            this.status = 0;
-        }
     }
 }

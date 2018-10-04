@@ -36,7 +36,6 @@ public class Main {
                     System.out.println("Running Simulation...");
                     sim.run();
 
-
                     break;
                 case 2: //Show configuration
                     System.out.println("Current configuration...");

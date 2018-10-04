@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Appliance extends SmartDevice {
 
-    public Appliance(double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
+    public Appliance(String name, double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
         //call smart object constructor
-        super(powerUsage, waterUsage, status, xOffset, yOffset);
+        super(name, powerUsage, waterUsage, status, xOffset, yOffset);
 
     }
 

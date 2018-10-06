@@ -17,11 +17,11 @@ public class SmartDevice {
 
 
     protected SmartDevice(String name, double powerUsage, double waterUsage, int status, int xOffset, int yOffset){
-        this.powerUsage = powerUsage;
-        this.waterUsage = waterUsage;
-        this.status = status;
-        this.xOffset = xOffset;
-        this.yOffset = yOffset;
+        this.powerUsage = 0;
+        this.waterUsage = 0;
+        this.status = 0;
+        this.xOffset = 0;
+        this.yOffset = 0;
 
     }
 

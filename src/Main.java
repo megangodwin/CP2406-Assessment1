@@ -51,4 +51,16 @@ public class Main {
         }
     }
 
+    public void importConfig() {
+
+    }
+
+    public void printConfig() {
+
+    }
+
+    public void writeConfig() {
+
+    }
+
 }

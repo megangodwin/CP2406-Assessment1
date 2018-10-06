@@ -25,6 +25,16 @@ public class SimulationFrame extends JFrame {
 
         JMenuItem importConfig = new JMenuItem("Import Config");
         JMenuItem viewConfig = new JMenuItem("View Config");
+
+        viewConfig.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConfigFrame configWindow = new ConfigFrame();
+                configWindow.pack();
+                configWindow.setSize(600,400);
+            }
+        });
+
         file.add(importConfig);
         file.add(viewConfig);
 
@@ -39,15 +49,9 @@ public class SimulationFrame extends JFrame {
         simulation.add(stopSim);
         simulation.add(pauseSim);
 
-//        ButtonGroup group = new ButtonGroup();
-//        group.add(importConfig);
-//        group.add(viewConfig);
-
         mainFrame.getContentPane();
 
         setVisible(true);
     }
-
-
 
 }

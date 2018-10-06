@@ -5,14 +5,16 @@ public class Room {
     //rooms control smartDevice positions?
     //initialise rooms based on configuration
 
+    //dimensions in metres
+
     int temperature;
-    int xOffset;
-    int yOffset;
+    int length;
+    int width;
 
     public Room() {
         this.temperature = 25;
-        this.xOffset = 0;
-        this.xOffset = 0;
+        this.length = length;
+        this.width = width;
     }
 
     public void getTemperature(int temperature) {

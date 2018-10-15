@@ -54,4 +54,10 @@ public class SimulationFrame extends JFrame {
         setVisible(true);
     }
 
+//    @Override
+//    protected void paintComponent(Graphics graphics) {
+//        super.paintComponents(graphics);
+//
+//    }
+
 }

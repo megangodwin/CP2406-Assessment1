@@ -1,15 +1,15 @@
 {
   "rooms": [
     {
-    "name": "livingRoom",
-    "length": 3,
-    "width": 5,
-    "smartObjects": [
-      {
-      "name": "livingRoomAirCon",
-      "xOffset": 0,
-      "yOffset": 0
-      }
+      "name": "livingRoom",
+      "length": 3,
+      "width": 5,
+      "smartObjects": [
+        {
+          "name": "livingRoomAirCon",
+          "xOffset": 0,
+          "yOffset": 0
+        }
       ]
     }
   ]

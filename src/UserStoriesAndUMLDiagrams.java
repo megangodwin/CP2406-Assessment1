@@ -4,7 +4,9 @@
     User wants to be able to exit the simulation - DONE
         Estimate: 1 day
 
-    TODO User wants to be able to see what the current room configuration is
+    TODO BUGGY User wants to be able to see what the current room configuration is
+    TODO read JSON file and parse into objects
+    TODO create view of house
         Estimate 1 day
 
     TODO User wants to track usage of electricity

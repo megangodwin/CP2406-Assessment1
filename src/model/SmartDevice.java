@@ -50,4 +50,40 @@ public class SmartDevice {
         //update time passed from smart house sim
         this.deviceTime = time;
     }
+
+    public int getYOffset ()
+    {
+        return yOffset;
+    }
+
+    public void setYOffset (int yOffset)
+    {
+        this.yOffset = yOffset;
+    }
+
+    public int getXOffset ()
+    {
+        return xOffset;
+    }
+
+    public void setXOffset (int xOffset)
+    {
+        this.xOffset = xOffset;
+    }
+
+    public String getName ()
+    {
+        return name;
+    }
+
+    public void setName (String name)
+    {
+        this.name = name;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "[yOffset = "+yOffset+", xOffset = "+xOffset+", name = "+name+"]";
+    }
 }

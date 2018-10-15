@@ -3,12 +3,19 @@ import view.SimulationFrame;
 import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import java.io.*;
+
+
 
 public class Main {
 
     public static void main(String[] args) {
 
         //import configuration txt file TODO
+
+        File configFile = new File("res/config.json");
 
         //initialise sim
         SmartHouseSimulator sim =  new SmartHouseSimulator();
@@ -51,7 +58,14 @@ public class Main {
         }
     }
 
-    public void importConfig() {
+    public void importConfig(File configFile) {
+
+//        try {
+//
+//
+//        } catch (FileNotFoundException f){
+//
+//        }
 
     }
 
@@ -60,6 +74,51 @@ public class Main {
     }
 
     public void writeConfig() {
+
+        Scanner input = new Scanner(System.in);
+
+        JSONObject root = new JSONObject();
+
+        JSONArray rooms = new JSONArray();
+
+        while(true) {
+            System.out.println("Enter room name,");
+            String roomName = input.nextLine();
+
+            //check to see if user pressed enter
+            if(roomName.length() == 0){
+                break;
+            }
+
+            //get the length and width
+            System.out.println("Enter room width,");
+            int roomWidth = input.nextInt();
+
+            System.out.println("Enter room length, ");
+            int roomLength = input.nextInt();
+
+            if(input.hasNextLine()) {
+                input.nextLine();
+            }
+
+            //create the object and store the class in it
+            JSONObject roomObject = new JSONObject();
+            roomObject.put("name", roomName);
+            roomObject.put("width", roomWidth);
+            roomObject.put("length", roomLength);
+
+            rooms.add(roomObject);
+        }
+
+        root.put("rooms", rooms);
+
+        System.out.println(root.toJSONString());
+
+        //write the JSON structure to a file
+        File JSONfile = new File("res/config.JSON");
+
+        PrintWriter JSONwriter = new PrintWriter(JSONfile);
+
 
     }
 

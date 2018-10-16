@@ -68,9 +68,9 @@ public class Main {
             //System.out.println("Enter room name,");
 
             Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
-            numInput = JOptionPane.showOptionDialog(null, "Select room type to add to house", "House configuration", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, possibilities, possibilities[1]);
+            Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house", "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
             //input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
-            String roomName = Integer.toString(numInput);
+            String roomName = roomSelection.toString();
 
             //check to see if uno input
             //TODO implement cancel button

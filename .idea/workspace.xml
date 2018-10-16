@@ -76,16 +76,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6851" />
+          <entry key="java" value="6941" />
           <entry key="json" value="7" />
-          <entry key="txt" value="562" />
+          <entry key="txt" value="586" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6851" />
+          <entry key="JAVA" value="6941" />
           <entry key="JSON" value="7" />
-          <entry key="PLAIN_TEXT" value="562" />
+          <entry key="PLAIN_TEXT" value="586" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -185,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+            <state relative-caret-position="290">
+              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -293,7 +293,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539690377409" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539691138457" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/model" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -399,7 +399,7 @@
       <workItem from="1539592709324" duration="2348000" />
       <workItem from="1539597990172" duration="2375000" />
       <workItem from="1539675567252" duration="4671000" />
-      <workItem from="1539687898320" duration="2428000" />
+      <workItem from="1539687898320" duration="3069000" />
     </task>
     <task id="LOCAL-00001" summary="attempt at using atomic integer">
       <created>1538480963361</created>
@@ -471,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539689676620</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="cancel doesn't work yet">
+      <created>1539690407821</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1539690407821</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -486,7 +493,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52033000" />
+    <option name="totallyTimeSpent" value="52674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -540,7 +547,8 @@
     <MESSAGE value="began to integrate JSON writing to ensure a properly formatted file" />
     <MESSAGE value="added window options for JSON set up input to get away from console input" />
     <MESSAGE value="attempt to limit room possibilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempt to limit room possibilities" />
+    <MESSAGE value="cancel doesn't work yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="cancel doesn't work yet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Main.java" />
@@ -655,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        <state relative-caret-position="290">
+          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

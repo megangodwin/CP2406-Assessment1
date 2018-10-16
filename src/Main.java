@@ -29,7 +29,7 @@ public class Main {
 
         System.out.println("Welcome to Smart House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
 
-        Scanner scanner = new Scanner(System.in);
+        writeConfig();
 
     }
 
@@ -52,7 +52,7 @@ public class Main {
 
     }
 
-    public void writeConfig() {
+    public static void writeConfig() {
 
         //Scanner input = new Scanner(System.in);
 
@@ -67,14 +67,16 @@ public class Main {
         while(true) {
             //System.out.println("Enter room name,");
 
-            input = JOptionPane.showInputDialog(null, "Enter room name");
+//            Object[] possibilities = {"Living room", "Kitchen", "Bedroom", "Bathroom", "Garage", "Office", "Leisure room", "Patio", "Garden"};
+//            numInput = JOptionPane.showOptionDialog(null, "Select room type to add to house", "House configuration", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, possibilities, "Bedroom");
+            input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
             String roomName = input;
 
-            //check to see if user pressed enter
-            //TODO implement cancel button
-            if(roomName.length() == 0){
-                break;
-            }
+//            //check to see if user pressed enter
+//            //TODO implement cancel button
+//            if(roomName.length() == 0){
+//                break;
+//            }
 
             //get the length and width
             //System.out.println("Enter room width,");

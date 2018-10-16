@@ -67,16 +67,16 @@ public class Main {
         while(true) {
             //System.out.println("Enter room name,");
 
-//            Object[] possibilities = {"Living room", "Kitchen", "Bedroom", "Bathroom", "Garage", "Office", "Leisure room", "Patio", "Garden"};
-//            numInput = JOptionPane.showOptionDialog(null, "Select room type to add to house", "House configuration", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, possibilities, "Bedroom");
-            input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
-            String roomName = input;
+            Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
+            numInput = JOptionPane.showOptionDialog(null, "Select room type to add to house", "House configuration", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, possibilities, possibilities[1]);
+            //input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
+            String roomName = Integer.toString(numInput);
 
-//            //check to see if user pressed enter
-//            //TODO implement cancel button
-//            if(roomName.length() == 0){
-//                break;
-//            }
+            //check to see if uno input
+            //TODO implement cancel button
+            if(roomName == null || roomName != null &&("".equals(roomName))){
+               break;
+            }
 
             //get the length and width
             //System.out.println("Enter room width,");

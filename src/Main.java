@@ -74,8 +74,11 @@ public class Main {
 
             //check to see if uno input
             //TODO implement cancel button
-            if(roomName == null || roomName != null &&("".equals(roomName))){
-               break;
+
+            if(roomName == null || (roomName != null &&  ("".equals(roomName)))){
+                System.out.println("Null");
+            } else if (roomName == JOptionPane.CANCEL_OPTION) {
+                System.out.println("JOptionPane");
             }
 
             //get the length and width

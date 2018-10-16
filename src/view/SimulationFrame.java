@@ -23,7 +23,8 @@ public class SimulationFrame extends JFrame {
         JMenu file = new JMenu("File");
         menuBar.add(file);
 
-        JMenuItem importConfig = new JMenuItem("Import Config");
+        JMenuItem importConfig = new JMenuItem("Create Config");
+
         JMenuItem viewConfig = new JMenuItem("View Config");
 
         viewConfig.addActionListener(new ActionListener() {
@@ -52,6 +53,15 @@ public class SimulationFrame extends JFrame {
         mainFrame.getContentPane();
 
         setVisible(true);
+    }
+
+    public void setupConfigListener(ActionListener listener) {
+
+
+    }
+
+    public void canelListener(ActionListener listener) {
+
     }
 
 //    @Override

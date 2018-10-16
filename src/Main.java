@@ -31,34 +31,11 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean quit = false;
-
-        while (!quit) {
-
-            int stateInput = scanner.nextInt();
-
-            switch (stateInput) {
-                case 0: //exit program
-                    System.out.println("Exiting program...");
-                    quit = true;
-                    break;
-                case 1: //run simulation
-                    System.out.println("Running Simulation...");
-
-                        sim.run();
-
-
-                    break;
-                case 2: //Show configuration
-                    System.out.println("Current configuration...");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Try again.");
-            }
-        }
     }
 
     public void importConfig(File configFile) {
+
+        //probably unnecessary
 
 //        try {
 //
@@ -71,35 +48,44 @@ public class Main {
 
     public void printConfig() {
 
+        //
+
     }
 
     public void writeConfig() {
 
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
 
+        //create the root of the JSON structure
         JSONObject root = new JSONObject();
 
         JSONArray rooms = new JSONArray();
 
+        String input;
+        int numInput;
+
         while(true) {
-            System.out.println("Enter room name,");
-            String roomName = input.nextLine();
+            //System.out.println("Enter room name,");
+
+            input = JOptionPane.showInputDialog(null, "Enter room name");
+            String roomName = input;
 
             //check to see if user pressed enter
+            //TODO implement cancel button
             if(roomName.length() == 0){
                 break;
             }
 
             //get the length and width
-            System.out.println("Enter room width,");
-            int roomWidth = input.nextInt();
+            //System.out.println("Enter room width,");
+            input = JOptionPane.showInputDialog(null, "Enter room width");
+            numInput = Integer.parseInt(input);
+            int roomWidth = numInput;
 
-            System.out.println("Enter room length, ");
-            int roomLength = input.nextInt();
-
-            if(input.hasNextLine()) {
-                input.nextLine();
-            }
+            //System.out.println("Enter room length, ");
+            input = JOptionPane.showInputDialog(null, "Enter room width");
+            numInput = Integer.parseInt(input);
+            int roomLength = numInput;
 
             //create the object and store the class in it
             JSONObject roomObject = new JSONObject();
@@ -115,9 +101,15 @@ public class Main {
         System.out.println(root.toJSONString());
 
         //write the JSON structure to a file
-        File JSONfile = new File("res/config.JSON");
+        File JSONFile = new File("res/config.JSON");
 
-        PrintWriter JSONwriter = new PrintWriter(JSONfile);
+        try {
+            PrintWriter JSONWriter = new PrintWriter(JSONFile);
+            JSONWriter.print(root.toJSONString());
+            JSONWriter.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.toString());
+        }
 
 
     }

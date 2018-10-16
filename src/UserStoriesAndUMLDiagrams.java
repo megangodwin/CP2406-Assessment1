@@ -28,6 +28,10 @@
     TODO user wants to know when there is a potential intruder in the house
         Estimate: 2 days
 
+    TODO user wants to be able to write the config without knowing how to write straight to the JSON file
+    aka implement a means of writing the config in the swing interface
+        Estimate: 2 days
+
 
 
 

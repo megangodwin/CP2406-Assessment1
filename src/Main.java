@@ -26,14 +26,15 @@ public class Main {
         simWindow.pack();
         simWindow.setSize(600,400);
 
-
-        System.out.println("Welcome to Smart House Simulator. Select an option to continue: 1 = Run simulation. 2 = See room configuration 0 = Exit.");
-
-        writeConfig();
+        try {
+            writeConfig();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
-    public void importConfig(File configFile) {
+    //public void importConfig(File configFile) {
 
         //probably unnecessary
 
@@ -44,13 +45,13 @@ public class Main {
 //
 //        }
 
-    }
+    //}
 
-    public void printConfig() {
+    //public void printConfig() {
 
         //
 
-    }
+    //}
 
     public static void writeConfig() {
 
@@ -67,38 +68,44 @@ public class Main {
         while(true) {
             //System.out.println("Enter room name,");
 
-            Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
-            Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house", "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
-            //input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
-            String roomName = roomSelection.toString();
+            try {
+                Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
+                Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house", "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
+                //input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
+                String roomName = roomSelection.toString();
 
-            //check to see if uno input
-            //TODO implement cancel button
+                //check to see if uno input
+                //TODO implement cancel button
+                if (roomSelection != null) {
 
-            if(roomName == null || (roomName != null &&  ("".equals(roomName)))){
-                System.out.println("Null");
-            } else if (roomName == JOptionPane.CANCEL_OPTION) {
-                System.out.println("JOptionPane");
+                    //get the length and width
+                    //System.out.println("Enter room width,");
+                    input = JOptionPane.showInputDialog(null, "Enter room width");
+                    numInput = Integer.parseInt(input);
+                    int roomWidth = numInput;
+
+                    //System.out.println("Enter room length, ");
+                    input = JOptionPane.showInputDialog(null, "Enter room width");
+                    numInput = Integer.parseInt(input);
+                    int roomLength = numInput;
+
+                    //create the object and store the class in it
+                    JSONObject roomObject = new JSONObject();
+                    roomObject.put("name", roomName);
+                    roomObject.put("width", roomWidth);
+                    roomObject.put("length", roomLength);
+
+                    rooms.add(roomObject);
+                } else {
+                    break;
+                }
+            } catch (HeadlessException e) {
+                e.printStackTrace();
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
             }
 
-            //get the length and width
-            //System.out.println("Enter room width,");
-            input = JOptionPane.showInputDialog(null, "Enter room width");
-            numInput = Integer.parseInt(input);
-            int roomWidth = numInput;
 
-            //System.out.println("Enter room length, ");
-            input = JOptionPane.showInputDialog(null, "Enter room width");
-            numInput = Integer.parseInt(input);
-            int roomLength = numInput;
-
-            //create the object and store the class in it
-            JSONObject roomObject = new JSONObject();
-            roomObject.put("name", roomName);
-            roomObject.put("width", roomWidth);
-            roomObject.put("length", roomLength);
-
-            rooms.add(roomObject);
         }
 
         root.put("rooms", rooms);

@@ -65,28 +65,51 @@ public class Main {
 
 
 
-        JTextField roomName = new JTextField(7);
-        JTextField roomWidth = new JTextField(4);
-        JTextField roomLength = new JTextField(4);
+        JTextField roomNameInput = new JTextField(7);
+        JTextField roomWidthInput = new JTextField(4);
+        JTextField roomLengthInput = new JTextField(4);
 
-        JPanel inputConfigPanel = new JPanel(new BorderLayout());
-        inputConfigPanel.setPreferredSize(new Dimension(300,300));
+        JPanel inputConfigPanel = new JPanel();
 
-        inputConfigPanel.add(new JLabel("Enter room name"), BorderLayout.NORTH);
-        inputConfigPanel.add(roomName);
+        inputConfigPanel.add(new JLabel("Enter room name"));
+        inputConfigPanel.add(roomNameInput);
 
-        inputConfigPanel.add(new JLabel("Enter room width"), BorderLayout.CENTER);
-        inputConfigPanel.add(roomWidth);
+        inputConfigPanel.add(new JLabel("Enter room width"));
+        inputConfigPanel.add(roomWidthInput);
 
-        inputConfigPanel.add(new JLabel("Enter room length"), BorderLayout.SOUTH);
-        inputConfigPanel.add(roomLength);
+        inputConfigPanel.add(new JLabel("Enter room length"));
+        inputConfigPanel.add(roomLengthInput);
 
         int result = JOptionPane.showConfirmDialog(null, inputConfigPanel, "Please enter room details", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
+            //convert the input to respective types
+            String roomName = roomNameInput.getText();
+
+            String strNum = roomWidthInput.getText();
+            int roomWidth = Integer.parseInt(strNum);
+
+            strNum = roomLengthInput.getText();
+            int roomLength = Integer.parseInt(strNum);
+
             System.out.println("completed config");
         } else {
             System.out.println("config canceled");
         }
+
+
+        root.put("rooms", rooms);
+
+        System.out.println(root.toJSONString());
+
+        //write the JSON structure to a file
+        File JSONFile = new File("src/res/config.JSON");
+
+        try {
+            PrintWriter JSONWriter = new PrintWriter(JSONFile);
+            JSONWriter.print(root.toJSONString());
+            JSONWriter.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.toString());
 
 
 
@@ -169,9 +192,8 @@ public class Main {
 //            } catch (FileNotFoundException e) {
 //                System.out.println(e.toString());
 //
-//        }
+        }
 
-
-    }
+        }
 
 }

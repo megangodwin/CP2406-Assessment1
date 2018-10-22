@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b6e97fb-704b-4a16-b8a2-bfb398c50fbf" name="Default Changelist" comment="">
+    <list default="true" id="9b6e97fb-704b-4a16-b8a2-bfb398c50fbf" name="Default Changelist" comment="trying other things with the input window to bypass the cancel button issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -58,29 +58,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7944" />
+          <entry key="java" value="9963" />
           <entry key="json" value="7" />
-          <entry key="txt" value="675" />
+          <entry key="txt" value="755" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7944" />
+          <entry key="JAVA" value="9963" />
           <entry key="JSON" value="7" />
-          <entry key="PLAIN_TEXT" value="675" />
+          <entry key="PLAIN_TEXT" value="755" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="52" />
-          <entry key="json" value="4" />
+          <entry key="json" value="5" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="52" />
-          <entry key="JSON" value="4" />
+          <entry key="JSON" value="5" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -167,8 +167,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="290">
+              <caret line="94" column="16" lean-forward="true" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,10 +203,10 @@
         <option value="$PROJECT_DIR$/src/model/SmartDevice.java" />
         <option value="$PROJECT_DIR$/src/model/House.java" />
         <option value="$PROJECT_DIR$/src/model/Room.java" />
-        <option value="$PROJECT_DIR$/src/res/config.json" />
         <option value="$PROJECT_DIR$/src/res/config.txt" />
         <option value="$PROJECT_DIR$/src/UserStoriesAndUMLDiagrams.java" />
         <option value="$PROJECT_DIR$/src/view/SimulationFrame.java" />
+        <option value="$PROJECT_DIR$/src/res/config.json" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -271,7 +271,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540188806282" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540214427660" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/model" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/json-simple-1.1.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -380,7 +380,7 @@
       <workItem from="1539687898320" duration="4923000" />
       <workItem from="1539995403494" duration="14440000" />
       <workItem from="1540096863894" duration="1504000" />
-      <workItem from="1540185396330" duration="1128000" />
+      <workItem from="1540185396330" duration="10220000" />
     </task>
     <task id="LOCAL-00001" summary="attempt at using atomic integer">
       <created>1538480963361</created>
@@ -480,7 +480,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540014005087</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="trying to catch null pointer exception">
+      <created>1540188831183</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1540188831183</updated>
+    </task>
+    <task id="LOCAL-00016" summary="trying other things with the input window to bypass the cancel button issue">
+      <created>1540195134244</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1540195134244</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -495,7 +509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71600000" />
+    <option name="totallyTimeSpent" value="80692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -552,7 +566,9 @@
     <MESSAGE value="cancel doesn't work yet" />
     <MESSAGE value="cancel now exists but doesn't cancel the loop" />
     <MESSAGE value="trying to catch null point exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to catch null point exception" />
+    <MESSAGE value="trying to catch null pointer exception" />
+    <MESSAGE value="trying other things with the input window to bypass the cancel button issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying other things with the input window to bypass the cancel button issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -632,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/zip/ZipFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -702,10 +711,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="290">
+          <caret line="94" column="16" lean-forward="true" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

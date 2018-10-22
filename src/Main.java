@@ -63,38 +63,49 @@ public class Main {
 //        int roomWidth;
 //        int roomLength;
 
+        int result;
 
 
-        JTextField roomNameInput = new JTextField(7);
-        JTextField roomWidthInput = new JTextField(4);
-        JTextField roomLengthInput = new JTextField(4);
+        do {
+            JTextField roomNameInput = new JTextField(7);
+            JTextField roomWidthInput = new JTextField(4);
+            JTextField roomLengthInput = new JTextField(4);
 
-        JPanel inputConfigPanel = new JPanel();
+            JPanel inputConfigPanel = new JPanel();
 
-        inputConfigPanel.add(new JLabel("Enter room name"));
-        inputConfigPanel.add(roomNameInput);
+            inputConfigPanel.add(new JLabel("Enter room name"));
+            inputConfigPanel.add(roomNameInput);
 
-        inputConfigPanel.add(new JLabel("Enter room width"));
-        inputConfigPanel.add(roomWidthInput);
+            inputConfigPanel.add(new JLabel("Enter room width"));
+            inputConfigPanel.add(roomWidthInput);
 
-        inputConfigPanel.add(new JLabel("Enter room length"));
-        inputConfigPanel.add(roomLengthInput);
+            inputConfigPanel.add(new JLabel("Enter room length"));
+            inputConfigPanel.add(roomLengthInput);
 
-        int result = JOptionPane.showConfirmDialog(null, inputConfigPanel, "Please enter room details", JOptionPane.OK_CANCEL_OPTION);
-        if (result == JOptionPane.OK_OPTION) {
-            //convert the input to respective types
-            String roomName = roomNameInput.getText();
+            result = JOptionPane.showConfirmDialog(null, inputConfigPanel, "Please enter room details", JOptionPane.OK_CANCEL_OPTION);
+            if (result == JOptionPane.OK_OPTION) {
+                //convert the input to respective types
+                String roomName = roomNameInput.getText();
 
-            String strNum = roomWidthInput.getText();
-            int roomWidth = Integer.parseInt(strNum);
+                String strNum = roomWidthInput.getText();
+                int roomWidth = Integer.parseInt(strNum);
 
-            strNum = roomLengthInput.getText();
-            int roomLength = Integer.parseInt(strNum);
+                strNum = roomLengthInput.getText();
+                int roomLength = Integer.parseInt(strNum);
 
-            System.out.println("completed config");
-        } else {
-            System.out.println("config canceled");
-        }
+                //add to the object
+                JSONObject roomObject = new JSONObject();
+                roomObject.put("name", roomName);
+                roomObject.put("width", roomWidth);
+                roomObject.put("length", roomLength);
+
+                rooms.add(roomObject);
+
+                System.out.println("completed config");
+            } else {
+                System.out.println("config canceled");
+            }
+        } while (result != JOptionPane.CANCEL_OPTION);
 
 
         root.put("rooms", rooms);
@@ -111,89 +122,8 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.out.println(e.toString());
 
-
-
-        //ask for room name
-
-        //if room name is populated
-
-            //get length and width
-
-            //clear room name
-
-            //ask for room name
-
-        //else, write to file
-
-
-
-
-//        while(true) {
-//            //System.out.println("Enter room name,");
-//
-//            Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
-//            Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house",
-//                    "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
-//            String roomName = roomSelection.toString();
-//
-//            System.out.println(roomName);
-//
-//            //check to see if no input
-//            //TODO implement cancel button
-////            if (roomName != null) {
-//
-//                //get the length and width
-//                input = JOptionPane.showInputDialog(null, "Enter " + roomName + " width", "House Configuration - Room Size", JOptionPane.QUESTION_MESSAGE);
-//                roomWidth = Integer.parseInt(input);
-//
-//                System.out.println(roomWidth);
-//
-//                input = JOptionPane.showInputDialog(null, "Enter " + roomName + " length", "House Configuration - Room Size", JOptionPane.QUESTION_MESSAGE);
-//                roomLength = Integer.parseInt(input);
-//
-//                System.out.println(roomLength);
-//
-//                //create the object and store the class in it
-//                JSONObject roomObject = new JSONObject();
-//                roomObject.put("name", roomName);
-//                roomObject.put("width", roomWidth);
-//                roomObject.put("length", roomLength);
-//
-//                rooms.add(roomObject);
-//            } else {
-//                root.put("rooms", rooms);
-//
-//                System.out.println(root.toJSONString());
-//
-//                //write the JSON structure to a file
-//                File JSONFile = new File("res/config.JSON");
-//
-//                try {
-//                    PrintWriter JSONWriter = new PrintWriter(JSONFile);
-//                    JSONWriter.print(root.toJSONString());
-//                    JSONWriter.close();
-//                } catch (FileNotFoundException e) {
-//                    System.out.println(e.toString());
-//                break;
-//            }
-//
-//        }
-//            root.put("rooms", rooms);
-//
-//            System.out.println(root.toJSONString());
-//
-//            //write the JSON structure to a file
-//            File JSONFile = new File("res/config.JSON");
-//
-//            try {
-//                PrintWriter JSONWriter = new PrintWriter(JSONFile);
-//                JSONWriter.print(root.toJSONString());
-//                JSONWriter.close();
-//            } catch (FileNotFoundException e) {
-//                System.out.println(e.toString());
-//
         }
 
-        }
+    }
 
 }

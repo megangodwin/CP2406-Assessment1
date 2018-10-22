@@ -26,11 +26,7 @@ public class Main {
         simWindow.pack();
         simWindow.setSize(600,400);
 
-        try {
-            writeConfig();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        writeConfig();
 
     }
 
@@ -64,63 +60,84 @@ public class Main {
 
         String input;
         int numInput;
+        int roomWidth;
+        int roomLength;
+
+        //boolean completeConfig = false;
 
         while(true) {
             //System.out.println("Enter room name,");
 
-            try {
-                Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
-                Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house", "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
-                //input = JOptionPane.showInputDialog(null, "Enter room name", "House Configuration", JOptionPane.PLAIN_MESSAGE);
-                String roomName = roomSelection.toString();
+            Object[] possibilities = {"Living room", "Bedroom", "Bathroom", "Kitchen", "Garage", "Office", "Leisure room", "Patio", "Garden"};
+            Object roomSelection = JOptionPane.showInputDialog(null, "Select room type to add to house",
+                    "House configuration", JOptionPane.QUESTION_MESSAGE, null, possibilities, possibilities[1]);
+            String roomName = roomSelection.toString();
 
-                //check to see if uno input
-                //TODO implement cancel button
-                if (roomSelection != null) {
+            System.out.println(roomName);
 
-                    //get the length and width
-                    //System.out.println("Enter room width,");
-                    input = JOptionPane.showInputDialog(null, "Enter room width");
-                    numInput = Integer.parseInt(input);
-                    int roomWidth = numInput;
+            //check to see if uno input
+            //TODO implement cancel button
+            if (roomName != null) {
 
-                    //System.out.println("Enter room length, ");
-                    input = JOptionPane.showInputDialog(null, "Enter room width");
-                    numInput = Integer.parseInt(input);
-                    int roomLength = numInput;
+                //get the length and width
+                input = JOptionPane.showInputDialog(null, "Enter " + roomName + " width", "House Configuration - Room Size", JOptionPane.QUESTION_MESSAGE);
+                roomWidth = Integer.parseInt(input);
 
-                    //create the object and store the class in it
-                    JSONObject roomObject = new JSONObject();
-                    roomObject.put("name", roomName);
-                    roomObject.put("width", roomWidth);
-                    roomObject.put("length", roomLength);
-
-                    rooms.add(roomObject);
-                } else {
+                if (roomWidth == 0) {
                     break;
                 }
-            } catch (HeadlessException e) {
-                e.printStackTrace();
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+
+
+                System.out.println(roomWidth);
+
+                input = JOptionPane.showInputDialog(null, "Enter " + roomName + " length", "House Configuration - Room Size", JOptionPane.QUESTION_MESSAGE);
+                roomLength = Integer.parseInt(input);
+
+                if (roomLength == 0) {
+                    break;
+                }
+
+                System.out.println(roomLength);
+
+                //create the object and store the class in it
+                JSONObject roomObject = new JSONObject();
+                roomObject.put("name", roomName);
+                roomObject.put("width", roomWidth);
+                roomObject.put("length", roomLength);
+
+                rooms.add(roomObject);
+            } else {
+//                root.put("rooms", rooms);
+//
+//                System.out.println(root.toJSONString());
+//
+//                //write the JSON structure to a file
+//                File JSONFile = new File("res/config.JSON");
+//
+//                try {
+//                    PrintWriter JSONWriter = new PrintWriter(JSONFile);
+//                    JSONWriter.print(root.toJSONString());
+//                    JSONWriter.close();
+//                } catch (FileNotFoundException e) {
+//                    System.out.println(e.toString());
+                break;
             }
 
-
         }
+            root.put("rooms", rooms);
 
-        root.put("rooms", rooms);
+            System.out.println(root.toJSONString());
 
-        System.out.println(root.toJSONString());
+            //write the JSON structure to a file
+            File JSONFile = new File("res/config.JSON");
 
-        //write the JSON structure to a file
-        File JSONFile = new File("res/config.JSON");
+            try {
+                PrintWriter JSONWriter = new PrintWriter(JSONFile);
+                JSONWriter.print(root.toJSONString());
+                JSONWriter.close();
+            } catch (FileNotFoundException e) {
+                System.out.println(e.toString());
 
-        try {
-            PrintWriter JSONWriter = new PrintWriter(JSONFile);
-            JSONWriter.print(root.toJSONString());
-            JSONWriter.close();
-        } catch (FileNotFoundException e) {
-            System.out.println(e.toString());
         }
 
 

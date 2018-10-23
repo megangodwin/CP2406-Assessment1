@@ -4,7 +4,6 @@
     <list default="true" id="9b6e97fb-704b-4a16-b8a2-bfb398c50fbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserStoriesAndUMLDiagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserStoriesAndUMLDiagrams.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,23 +58,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10766" />
+          <entry key="java" value="11827" />
           <entry key="json" value="7" />
-          <entry key="txt" value="877" />
+          <entry key="txt" value="951" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10766" />
+          <entry key="JAVA" value="11827" />
           <entry key="JSON" value="7" />
-          <entry key="PLAIN_TEXT" value="877" />
+          <entry key="PLAIN_TEXT" value="951" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JSON" value="1" />
           <entry key="class" value="1" />
-          <entry key="java" value="54" />
+          <entry key="java" value="57" />
           <entry key="json" value="6" />
           <entry key="txt" value="2" />
         </counts>
@@ -83,7 +82,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="54" />
+          <entry key="JAVA" value="57" />
           <entry key="JSON" value="7" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
@@ -171,8 +170,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+            <state relative-caret-position="629">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +192,7 @@
         <entry file="file://$PROJECT_DIR$/src/res/config.JSON">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-column="96" />
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -312,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540291976319" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540295680844" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/model" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/json-simple-1.1.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -422,7 +421,7 @@
       <workItem from="1539995403494" duration="14440000" />
       <workItem from="1540096863894" duration="1504000" />
       <workItem from="1540185396330" duration="12137000" />
-      <workItem from="1540290229042" duration="1736000" />
+      <workItem from="1540290229042" duration="5592000" />
     </task>
     <task id="LOCAL-00001" summary="attempt at using atomic integer">
       <created>1538480963361</created>
@@ -550,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540215399477</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="starting the logic of reading the JSON file and parsing usable objects">
+      <created>1540292090687</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1540292090687</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -565,13 +571,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84345000" />
+    <option name="totallyTimeSpent" value="88201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08528785" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08528785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -580,7 +586,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2360515" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2360515" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39806867" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -626,7 +632,8 @@
     <MESSAGE value="trying other things with the input window to bypass the cancel button issue" />
     <MESSAGE value="different approach to config input" />
     <MESSAGE value="code now successfully takes input for the config and writes it to a JSON file" />
-    <option name="LAST_COMMIT_MESSAGE" value="code now successfully takes input for the config and writes it to a JSON file" />
+    <MESSAGE value="starting the logic of reading the JSON file and parsing usable objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting the logic of reading the JSON file and parsing usable objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,20 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/jar/JarFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2433" selection-start-line="2433" selection-end-line="2433" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/SimulationFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -770,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/config.JSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Assessment1/Main.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -787,10 +773,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/jar/JarFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="2447" column="7" lean-forward="true" selection-start-line="2447" selection-start-column="7" selection-end-line="2447" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/config.JSON">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        <state relative-caret-position="629">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

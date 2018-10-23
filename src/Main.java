@@ -19,7 +19,7 @@ public class Main {
         //importConfig(configFile)
 
         //initialise sim
-        SmartHouseSimulator sim =  new SmartHouseSimulator();
+        //SmartHouseSimulator sim =  new SmartHouseSimulator();
 
         //initialise frame
         SimulationFrame simWindow = new SimulationFrame();
@@ -27,63 +27,8 @@ public class Main {
         simWindow.pack();
         simWindow.setSize(600,400);
 
-        writeConfig();
-
-        importConfig();
 
     }
-
-    public static void importConfig() {
-        //turns the JSON file into usable objects
-
-        JSONParser parser = new JSONParser();
-
-        try {
-            //read the file to an object
-            Object obj = parser.parse(new FileReader("src/res/config.JSON"));
-
-            //JSON file initiates as an object. parse this
-            JSONObject jsonObj = (JSONObject) obj;
-
-            //JSON object contains array of rooms. parse this
-            JSONArray rooms = (JSONArray) jsonObj.get("rooms");
-
-            //iterate through the array of rooms
-            for (Object o : rooms) {
-                //initiate the object
-                JSONObject room = (JSONObject) o;
-
-                String roomName = (String) room.get("name");
-                System.out.println("Room name: " + roomName);
-
-//                String widthStr = (String) room.get("width");
-//                int roomWidth = Integer.parseInt(widthStr);
-//                int roomWidth = (int) room.get("width");
-                int roomWidth = Integer.parseInt((String)room.get("width"));
-                System.out.println("Room width: " + roomWidth);
-
-                String lengthStr = (String) room.get("length");
-                int roomLength = Integer.parseInt((lengthStr));
-//                int roomLength = (int) room.get("length");
-                System.out.println("Room length: " + roomLength);
-
-                System.out.println();
-            }
-
-
-        }catch(Exception e) {
-            e.printStackTrace();
-
-        }
-
-
-    }
-
-    //public void printConfig() {
-
-        //
-
-    //}
 
     public static void writeConfig() {
         //create the root of the JSON structure
@@ -114,10 +59,8 @@ public class Main {
                 String roomName = roomNameInput.getText();
 
                 String roomWidth = roomWidthInput.getText();
-//                int roomWidth = Integer.parseInt(strNum);
 
                 String roomLength = roomLengthInput.getText();
-//                int roomLength = Integer.parseInt(strNum);
 
                 //add to the object
                 JSONObject roomObject = new JSONObject();
@@ -147,5 +90,7 @@ public class Main {
         }
 
     }
+
+
 
 }

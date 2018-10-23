@@ -22,17 +22,15 @@
         Estimate: 3 days
 
     TODO Implemented - A user doesn’t want sprinklers to activate while it’s raining
-    requires more testing
+    requires more testing upon further implementation
         Estimate: 3 days
 
-    TODO user wants to know when there is a potential intruder in the house
-        Estimate: 2 days
-
-    TODO user wants to be able to write the config without knowing how to write straight to the JSON file
-    aka implement a means of writing the config in the swing interface
+    TODO BUGGY user wants to be able to write the config without knowing how to write straight to the JSON file
+    TODO write devices
         Estimate: 2 days
 
 
+TODO make menu items clickable
 
 
 

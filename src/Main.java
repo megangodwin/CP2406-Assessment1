@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import java.io.*;
 
 
@@ -14,8 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         //import configuration txt file TODO
-
-        File configFile = new File("res/config.json");
+        //importConfig(configFile)
 
         //initialise sim
         SmartHouseSimulator sim =  new SmartHouseSimulator();
@@ -26,22 +27,39 @@ public class Main {
         simWindow.pack();
         simWindow.setSize(600,400);
 
-        writeConfig();
+        importConfig();
 
     }
 
-    //public void importConfig(File configFile) {
+    public static void importConfig() {
+        //turns the JSON file into usable objects
 
-        //probably unnecessary
+        try {
+            JSONParser parser = new JSONParser();
+            JSONArray house = (JSONArray) parser.parse(new FileReader("src/res/config.JSON"));
 
-//        try {
-//
-//
-//        } catch (FileNotFoundException f){
-//
-//        }
+            for (Object o : house) {
+                JSONObject room = (JSONObject) o;
 
-    //}
+                String roomName = (String) room.get("room");
+                System.out.println("Room name: " + roomName);
+
+                int roomWidth = (int) room.get("width");
+                System.out.println("Room width: " + roomWidth);
+
+                int roomLenth = (int) room.get("length");
+                System.out.println("Room length: " + roomLenth);
+
+                //get object array and parse
+
+                System.out.println();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 
     //public void printConfig() {
 
@@ -50,21 +68,11 @@ public class Main {
     //}
 
     public static void writeConfig() {
-
-        //Scanner input = new Scanner(System.in);
-
         //create the root of the JSON structure
         JSONObject root = new JSONObject();
-
         JSONArray rooms = new JSONArray();
 
-//        String input;
-//        int numInput;
-//        int roomWidth;
-//        int roomLength;
-
         int result;
-
 
         do {
             JTextField roomNameInput = new JTextField(7);
@@ -100,10 +108,6 @@ public class Main {
                 roomObject.put("length", roomLength);
 
                 rooms.add(roomObject);
-
-                System.out.println("completed config");
-            } else {
-                System.out.println("config canceled");
             }
         } while (result != JOptionPane.CANCEL_OPTION);
 

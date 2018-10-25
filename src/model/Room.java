@@ -54,5 +54,10 @@ public class Room {
         this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return name + " Width: " + width + " Length: " + length + " Temperature: " + temperature;
+    }
+
 }
 

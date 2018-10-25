@@ -3,10 +3,18 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.HashMap;
+import sim.SmartHouseSimulator;
 
-public class SimulationFrame extends JFrame {
+import model.Room;
+
+
+public class SimulationFrame extends JFrame implements ActionListener{
 
     JMenuBar menuBar;
+
+//    HashMap<String, Room> rooms = new HashMap<String, Room>();
+//    HashMap<String, Room>
 
     public SimulationFrame() {
         super("Smart House Simulator");
@@ -60,14 +68,23 @@ public class SimulationFrame extends JFrame {
 
     }
 
-    public void canelListener(ActionListener listener) {
+
+    @Override
+    protected void paintComponent(Graphics graphics) {
+        super.paintComponents(graphics);
+
+        graphics.setFont(new Font("Arial", Font.BOLD, 28));
+
+
+        for (Room r : house.values()) {
+
+        }
 
     }
 
-//    @Override
-//    protected void paintComponent(Graphics graphics) {
-//        super.paintComponents(graphics);
-//
-//    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 
 }

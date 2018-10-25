@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package model;
 
 public class Fixture extends SmartDevice {
@@ -15,19 +16,19 @@ public class Fixture extends SmartDevice {
 
 }
 =======
+=======
+>>>>>>> view-configuration
 package model;
 
 public class Fixture extends SmartDevice {
 
-    public Fixture(double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
-        super(powerUsage, waterUsage, status, xOffset, yOffset);
+    public Fixture(String name, double powerUsage, double waterUsage, int status, int xOffset, int yOffset) {
+        super(name, powerUsage, waterUsage, status, xOffset, yOffset);
 
 
     }
-
-
-
-
-
 }
+<<<<<<< HEAD
 >>>>>>> origin/sprinklers
+=======
+>>>>>>> view-configuration

@@ -1,15 +1,18 @@
 package model;
 
+import java.util.Scanner;
+
 public class SmartDevice {
 
 
-    //power usage per watt
-    //water usage per litre
+    //power usage in watts per hour
+    //water usage in litres per hour
 
-    private double powerUsage;
-    private double waterUsage;
-    private int status;
-    private int xOffset, yOffset;
+    protected double powerUsage;
+    protected double waterUsage;
+    protected int status;
+    protected int xOffset, yOffset;
+    int deviceTime;
 
     protected SmartDevice(double powerUsage, double waterUsage, int status, int xOffset, int yOffset){
         this.powerUsage = powerUsage;
@@ -30,7 +33,16 @@ public class SmartDevice {
 
     public boolean setStatus(){
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter status");
+
         //was the setting successful
+        //if (deviceStatus == setting)
         return true;
+    }
+
+    protected void setDeviceClock(int time){
+        //update time passed from smart house sim
+        this.deviceTime = time;
     }
 }

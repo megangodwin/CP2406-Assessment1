@@ -12,11 +12,8 @@ public class Room {
     int width;
     String name;
 
-    public Room(String name, int length, int width) {
-        this.name = name;
+    public Room() {
         this.temperature = 25;
-        this.length = length;
-        this.width = width;
     }
 
     public void getTemperature(int temperature) {

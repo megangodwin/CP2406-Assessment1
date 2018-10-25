@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import model.*;
 import view.*;
@@ -17,12 +18,15 @@ public class SmartHouseSimulator {
     public int time;
     public static int weatherStatus = 0;
 
-    public SmartHouseSimulator(ArrayList house, SimulationFrame mainFrame) {
+    public SmartHouseSimulator() {
         //has a
         //house. which has room. which have objects
         //simulation frame
 
         //call the import config to instantiate the objects in the house list
+
+        setConfig();
+
 
     }
 
@@ -79,10 +83,11 @@ public class SmartHouseSimulator {
 
     }
 
-    public void setConfig() {
+    public static ArrayList setConfig() {
         //turns the JSON file into usable objects
 
         JSONParser parser = new JSONParser();
+        HashMap<String, Room> house = new HashMap();
 
         try {
             //read the file to an object
@@ -109,10 +114,19 @@ public class SmartHouseSimulator {
                 System.out.println("Room length: " + roomLength);
 
                 //create room object
+                Room rm = new Room();
+                rm.setName(roomName);
+                rm.setLength(roomLength);
+                rm.setWidth(roomWidth);
 
-                //append room object to the room array in house class
+                //append room object to the room array
 
-                System.out.println();
+                house.add(rm);
+
+                //TEST - check to see if objects are successfully being appended
+                System.out.println(house);
+                System.out.println(house);
+
             }
 
 
@@ -121,7 +135,7 @@ public class SmartHouseSimulator {
 
         }
 
-
+        return house;
     }
 
 

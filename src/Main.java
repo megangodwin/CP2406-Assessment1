@@ -19,7 +19,7 @@ public class Main {
         //importConfig(configFile)
 
         //initialise sim
-        //SmartHouseSimulator sim =  new SmartHouseSimulator();
+        SmartHouseSimulator sim =  new SmartHouseSimulator();
 
         //initialise frame
         SimulationFrame simWindow = new SimulationFrame();
@@ -90,6 +90,8 @@ public class Main {
         }
 
     }
+
+
 
 
 

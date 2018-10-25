@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-package model;//import model;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
-=======
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
->>>>>>> view-configuration
-
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -52,7 +43,7 @@ public class SmartHouseSimulator {
                 System.out.println(time);
 
             }
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println("Interrupted exception");
             e.printStackTrace();
         }
@@ -88,10 +79,9 @@ public class SmartHouseSimulator {
         //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
 
 
-
     }
 
-    public static ArrayList setConfig() {
+    public static HashMap<String, Room> setConfig() {
         //turns the JSON file into usable objects
 
         JSONParser parser = new JSONParser();
@@ -115,10 +105,10 @@ public class SmartHouseSimulator {
                 String roomName = (String) room.get("name");
                 System.out.println("Room name: " + roomName);
 
-                int roomWidth = Integer.parseInt((String)room.get("width"));
+                int roomWidth = Integer.parseInt((String) room.get("width"));
                 System.out.println("Room width: " + roomWidth);
 
-                int roomLength = Integer.parseInt((String)room.get("length"));
+                int roomLength = Integer.parseInt((String) room.get("length"));
                 System.out.println("Room length: " + roomLength);
 
                 //create room object
@@ -129,99 +119,20 @@ public class SmartHouseSimulator {
 
                 //append room object to the room array
 
-                house.add(rm);
+                house.put(roomName, rm);
 
                 //TEST - check to see if objects are successfully being appended
                 System.out.println(house);
-                System.out.println(house);
+                System.out.println(house.get(roomName));
 
             }
 
 
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
 
         }
 
         return house;
     }
-
-
-
-<<<<<<< HEAD
 }
-
-
-=======
-public class SmartHouseSimulator implements Runnable{
-
-    public static int time;
-    public static int weatherStatus = 0;
-
-
-    @Override
-    public void run() {
-
-        int max = 100;
-        int min = 0;
-        int randomNumber = (int) (Math.random() * ((max - min + 1)));
-
-        int seconds = 0;
-        int MAX_SECONDS = 1440;
-        try {
-            while(seconds != MAX_SECONDS) {
-                ++time;
-                ++seconds;
-                Thread.sleep(85);
-
-                //random weather generation
-                if(randomNumber <=65) {
-                    if(weatherStatus == 0) {
-                        weatherStatus = 0; //do nothing
-                    } else if(weatherStatus != 0) {
-                        weatherStatus = 0;
-                        System.out.println("It is sunny"); //only displays whe there is a change in the weather
-                    }
-                }else if(randomNumber > 65) {
-                    if(weatherStatus == 1) {
-                        weatherStatus = 1; //do nothing
-                    } else if(weatherStatus != 1) {
-                        weatherStatus = 1;
-                        System.out.println("It is raining"); //only displays when there is a change in the weather
-                    }
-                }
-
-                System.out.println(time);
-
-                //to translate to readable time - while minute count isn't 60, keep counting. once count reaches 60, increment hour and reset minute count
-            }
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-
-
-        //time - 1440 simulated minutes per simulation
-
-
-    }
-
-//    public void timeSimulation(int time){
-//
-//
-//    }
-
-    public int getSimTime(){
-        return time;
-    }
-
-
-
-}
-
-
->>>>>>> origin/sprinklers
-=======
-}
->>>>>>> view-configuration
